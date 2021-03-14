@@ -1,26 +1,41 @@
-video 20210309 -110457
+Video on Teams 20210309 -110457
+
+should do: 
+
+OBS: Kör från commandprompt som Administratör
+** setx -m JAVA_HOME "C:\Progra~1\Java\jdk-15.0.2"
+
 Spring Add Starter> Web server, data-jpa, mysql driver
-DemoController: detta class kan heta vad som helst men det ska använda attribute @RestController  
-Set , Get ska vara med set , get för att kan konventeras till json. 
-gränsnittet till ett microservice är http inte console
-http://127.0.0.1:8080/player en url altid har ett portnummer
-om användas https standard porten bli 443 och det behöver  inte skriva i urlen 
-man kan avända http://jsonviewer.stack.hu/ för att se json structurad el. postman 
+    DemoController: This class uses attribute @RestController  
+    to use get and set for json file these commands should be in lowercase 
+    for a microservice http is used as a gui not console
+    http://127.0.0.1:8080/booksotre is the url is used to get and connect to database we can see data in json form
+    for https the standard port is 443 not 8080, we usually dont write this portnumber
+    we can use http://jsonviewer.stack.hu/ or postman to see our data  in a structured form 
 
-020 Microservices och REST.pptx (1).pdf
-// GET /player                           Returns a list of all players
-// GET /player/12313                    Returns a single player with ID 99. Or 404 if not found
-// POST /player  [Name=”Wayne Gretzky”] Creates a new player, sets name as Wayne Gretzky. Return 201 med URL till nya spelaren dvs /players/99 tex
-// PUT /player/100 [Name=”Stefan H”]    Replace a player with ID 100 Alla properties måste skickas med
-// DELETE /player/100                   Deletes player with id 100. Or 404 if not found
-// PATCH /player/100                    [Name=”Stefan H”] Partial update...SVÅRT API
+To connect to database:
+run docker desktop
+start container: mysql02
+
+we can use an image many times to create a container, the images are templates on different machines/environments.
+and then to see and the run needed commands on ps(powershell)
+
+Some commands in docker: 
+    docker ps
+    docker start 9b462f1126fd
+    docker exec -it mysql02 bash
+    mysql -u root -p   pass: hejsan123
+    use testdatabasen;
+    show tables;
+    select * from book_store;
+    mysql> delete from book_store where id= 3;      
+    ********************************************************************
+
+power point 020 on Teams:  Microservices och REST.pptx (1).pdf
+// GET /bookstore                            Returns a list of all books
+// GET /plabookstore/2                       Returns a single book with ID 99. Or 404 if not found
+// POST /bookstore  [Title=”Bus 57”]        Creates a new book, sets title as Bus 57. Return 201 with URL to the new book dvs /books/99 tex
+// PUT /bookstore/100 [Title=”Bus 57”]      Replace a book with ID 100 all properties must to be sent 
+// DELETE /bookstore/100                     Deletes book with id 100. Or 404 if not found
+// PATCH /bookstore/100                      [price=424] Partial update...SVÅRT API
 *************************************************************
-
-docker ps
-docker start 9b462f1126fd
-docker exec -it mysql02 bash
- mysql -u root -p   pass: hejsan123
- use testdatabasen;
- show tables;
- select * from book_store;
- mysql> delete from book_store where id= 3;      
