@@ -1,0 +1,26 @@
+video 20210309 -110457
+Spring Add Starter> Web server, data-jpa, mysql driver
+DemoController: detta class kan heta vad som helst men det ska använda attribute @RestController  
+Set , Get ska vara med set , get för att kan konventeras till json. 
+gränsnittet till ett microservice är http inte console
+http://127.0.0.1:8080/player en url altid har ett portnummer
+om användas https standard porten bli 443 och det behöver  inte skriva i urlen 
+man kan avända http://jsonviewer.stack.hu/ för att se json structurad el. postman 
+
+020 Microservices och REST.pptx (1).pdf
+// GET /player                           Returns a list of all players
+// GET /player/12313                    Returns a single player with ID 99. Or 404 if not found
+// POST /player  [Name=”Wayne Gretzky”] Creates a new player, sets name as Wayne Gretzky. Return 201 med URL till nya spelaren dvs /players/99 tex
+// PUT /player/100 [Name=”Stefan H”]    Replace a player with ID 100 Alla properties måste skickas med
+// DELETE /player/100                   Deletes player with id 100. Or 404 if not found
+// PATCH /player/100                    [Name=”Stefan H”] Partial update...SVÅRT API
+*************************************************************
+
+docker ps
+docker start 9b462f1126fd
+docker exec -it mysql02 bash
+ mysql -u root -p   pass: hejsan123
+ use testdatabasen;
+ show tables;
+ select * from book_store;
+ mysql> delete from book_store where id= 3;      
