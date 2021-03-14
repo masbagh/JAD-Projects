@@ -18,12 +18,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 //          127:0:0:1:8080/bookstore/1
 
 
-// GET /book                           Returns a list of all books
-// GET /book/1                         Returns a single book with ID 99. Or 404 if not found
-// POST /book  [Name=”Wayne Gretzky”] Creates a new book, sets name as Wayne Gretzky. Return 201 med URL till nya spelaren dvs /books/99 tex
-// PUT /book/100 [Name=”Stefan H”]    Replace a book with ID 100 Alla properties måste skickas med
-// DELETE /book/100                   Deletes book with id 100. Or 404 if not found
-// PATCH /book/100                    [Name=”Stefan H”] Partial update...SVÅRT API
 @RestController
 public class DemoController {
 

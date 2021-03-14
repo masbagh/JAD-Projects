@@ -1,3 +1,5 @@
+This project is a micro service using docker to manipulate  database bookstore. it provides crud on a database called bookstore. 
+
 Video on Teams 20210309 -110457
 
 should do: 
