@@ -14,9 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
-//    http-anrop 127:0:0:1:8080/bookstore
-//          127:0:0:1:8080/bookstore/1
-
+//    http-anrop 
+//http://127.0.0.1:8080/bookstore  or   http://localhost:8080/bookstore
 
 @RestController
 public class DemoController {
